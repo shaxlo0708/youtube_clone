@@ -6,8 +6,96 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media (max-width:1000px){
+  .i-frame{
+    width: 900px;
+    height: 500px;
+  }
+}
+@media (max-width:900px){
+  .i-frame{
+    width: 800px;
+    height: 400px;
+  }
+}
+@media (max-width:800px){
+  .i-frame{
+    width: 700px;
+    height: 350px;
+  }
+  
+}
+@media (max-width:700px){
+  .i-frame{
+    width: 600px;
+  }
+  .youtubeLogo{
+    opacity: 0;
+  }
+  
+}
+@media (max-width:600px){
+  .i-frame{
+    width: 500px;
+  }
+  .bar{
+    display: none;
+  }
+  .logo_text{
+    display: none;
+  }
+  .bottom_bar{
+    display: flex !important;
+  }
+}
+@media (max-width:500px){
+  .i-frame{
+    width: 400px;
+  }
+}
+@media (max-width:400px){
+  .i-frame{
+    width: 350px;
+    height: 200px;
+  }
+}
+.bottom_bar{
+  display: none;
+  padding: 0px 10px;
+  color: var( --text);
+}
+.b_bar{
+  background-color: var(--body);
+}
+:root{
+  --body:white;
+  --text:black;
+  --home:rgb(255, 255, 255);
+}
+.dark{
+  --body:black;
+  --text:white;
+  --home:rgb(0, 11, 18);
+}
+.nav{
+  background-color: var(--body);
+}
+.youtubeLogo{
+  color: var(--text);
+}
+.home{
+  background-color: var(--home);
+  color: var(--text);
+}
+.paramVideo{
+  background-color: var(--home);
 }
